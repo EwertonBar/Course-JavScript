@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" name="textvel1" id="textvel1" >
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var velocidade = Number (document.querySelector('input#textvel1').value)
+            document.querySelector("div#res").innerHTML = `<p>Sua velocidade é de ${velocidade}<p>`
+            if (velocidade > 60) {
+                document.querySelector("div#res").innerHTML += `<p>Você ultrapassou a velocidade permitida de 60km/h e foi multado!<p>`
+            } else {
+                document.querySelector("div#res").innerHTML += ``
+            }
+        }
+
+    </script>
+</body>
+</html>
